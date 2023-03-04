@@ -1,9 +1,10 @@
-body{
+body {
     background-color: #0A0807;
     align-items: center;
     display: flex;
 }
-.container{
+
+.container {
     margin: auto auto auto;
     width: fit-content;
     height: fit-content;
@@ -11,24 +12,30 @@ body{
     border-radius: 8px;
     background-color: #BCAB94;
     font-family: 'Anybody';
-    color:antiquewhite;
+    color: black;
     align-items: center;
     text-align: center;
 }
-.result{
+
+.result {
     display: none;
+    color: #c41e1e;
 }
-.texto{
+
+.texto {
     display: block;
 }
-.demanda{
+
+.demanda {
     display: none;
 }
-#ipt_qtdOnibus{
+
+#ipt_qtdOnibus {
     border: 0px;
     border-radius: 2px;
 }
-.btnProx{
+
+.btnProx {
     background-color: #04f06a;
     padding: 8px;
     border: 0px;

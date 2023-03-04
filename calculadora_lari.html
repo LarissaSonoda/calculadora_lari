@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <img src="Logo.JPG" alt="logo conway 2023">
         <br><br>
-        <div class="texto">
-            Quantos ônibus dessa linha você possui 
+        <div class="texto" id="card1">
+            Quantos ônibus dessa linha você possui
             <br><br>
             <input id="ipt_qtdOnibus">
             <br><br>
             <button class="btnProx" onclick="proxEtapa()">Próximo ></button>
         </div>
 
-        <div class="demanda">
+        <div class="demanda" id="passageiros">
             Qual a média de passageiros em um dia
             <br><br>
             <input id="ipt_demanda">
@@ -31,7 +31,7 @@
         </div>
 
 
-        <div class="result"></div>
+        <div class="result" id="resultado"></div>
     </div>
 </body>
 
@@ -40,9 +40,48 @@
 <script>
     //são + ou - 170 pessoas por ônibus (em um ônibus convencional)
     function proxEtapa() {
+        //declaração de variáveis
+        var cd1 = document.getElementById("card1");
+        var cd2 = document.getElementById("passageiros");
+        var qtdeOnibus = Number(ipt_qtdOnibus.value);
+        //verificação se o campo foi preenchido antes de prosseguir
+        if (qtdeOnibus == 0 || qtdeOnibus == '') {
+            alert("É necessário informar um valor antes de prosseguir");
+        }
+        else {
+            //função vai habilitar a visualização da div demanda e salvar o valor do que foi digitado na ipt_qtdOnibus
+            cd1.style.display = 'none';
+            // setar a visualização do próximo card
+            cd2.style.display = 'block'
+        }
 
     }
-    function ver(){
-        
+    function ver() {
+        //conta para mostrar se a capacidade está sendo atendida com base na satisfação dos clientes e como a solução ajudaria a melhorar a logística da distribuição de ônibus por linha
+        var cd2 = document.getElementById("passageiros");
+        var resultado = document.getElementById("resultado");
+        var container = document.getElementById("container");
+
+        //levando em consideração os ônibus básicos essa é a quantidade de passageiros que pode ser transportada
+        var passPorFrota = ipt_qtdOnibus.value * 74;
+        var demandaTotal = ipt_qtdOnibus.value * ipt_demanda.value;
+
+        var razao = demandaTotal / passPorFrota;
+        if (razao == 1 || razao < 1) {
+            resultado.innerHTML = "Baseado no que foi informado a sua linha está operando com capacidade de 100% da ocupação recomendada por viagem";
+            resultado.style.display = 'block';
+            cd2.style.display = 'none';
+            resultado.style.color='#218380';
+            container.style.width = '40%';
+            container.style.height = '40%';
+        }
+        else {
+            resultado.innerHTML = "Baseado no que foi informado a sua linha está operando com capacidade acima do recomendado, com nossa solução você poderá <b>otimizar esse resultado em até 40%</b>"
+            resultado.style.display = 'block';
+            cd2.style.display = 'none';
+            container.style.width = '40%';
+            container.style.height = '40%';
+            resultado.style.color='#c41e1e';
+        }
     }
 </script>
