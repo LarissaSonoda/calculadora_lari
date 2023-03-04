@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simule aqui!</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Anybody' rel='stylesheet'>
 </head>
+
 <body>
     <div class="container">
-        <input type="text">
+        <img src="Logo.JPG" alt="logo conway 2023">
+        <br><br>
+        <div class="texto">
+            Quantos ônibus dessa linha você possui 
+            <br><br>
+            <input id="ipt_qtdOnibus">
+            <br><br>
+            <button class="btnProx" onclick="proxEtapa()">Próximo ></button>
+        </div>
+
+        <div class="demanda">
+            Qual a média de passageiros em um dia
+            <br><br>
+            <input id="ipt_demanda">
+            <br><br>
+            <button class="btnProx" onclick="ver()">Ver resultado</button>
+        </div>
+
+
         <div class="result"></div>
     </div>
 </body>
+
 </html>
+
+<script>
+    //são + ou - 170 pessoas por ônibus (em um ônibus convencional)
+    function proxEtapa() {
+
+    }
+    function ver(){
+        
+    }
+</script>

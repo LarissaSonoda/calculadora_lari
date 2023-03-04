@@ -1,0 +1,41 @@
+body{
+    background-color: #0A0807;
+    align-items: center;
+    display: flex;
+}
+.container{
+    margin: auto auto auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #BCAB94;
+    font-family: 'Anybody';
+    color:antiquewhite;
+    align-items: center;
+    text-align: center;
+}
+.result{
+    display: none;
+}
+.texto{
+    display: block;
+}
+.demanda{
+    display: none;
+}
+#ipt_qtdOnibus{
+    border: 0px;
+    border-radius: 2px;
+}
+.btnProx{
+    background-color: #04f06a;
+    padding: 8px;
+    border: 0px;
+    border-radius: 10px;
+    float: right;
+    color: #0A0807;
+    font-family: 'Anybody';
+    font-size: medium;
+    font-weight: bold;
+}
