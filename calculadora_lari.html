@@ -68,7 +68,7 @@
 
         var razao = demandaTotal / passPorFrota;
         if (razao == 1 || razao < 1) {
-            resultado.innerHTML = "Baseado no que foi informado a sua linha está operando com capacidade de 100% da ocupação recomendada por viagem";
+            resultado.innerHTML = "Baseado no que foi informado a sua linha está operando com capacidade de 100% da ocupação recomendada por viagem! Caso queira otimizar suas rotas entre em contato conosco!";
             resultado.style.display = 'block';
             cd2.style.display = 'none';
             resultado.style.color='#218380';
@@ -76,7 +76,7 @@
             container.style.height = '40%';
         }
         else {
-            resultado.innerHTML = "Baseado no que foi informado a sua linha está operando com capacidade acima do recomendado, com nossa solução você poderá <b>otimizar esse resultado em até 40%</b>"
+            resultado.innerHTML = "Baseado no que foi informado a sua linha está operando com capacidade acima do recomendado, com nossa solução você poderá <b>otimizar esse resultado em até 40%</b> Entre em contato conosco!"
             resultado.style.display = 'block';
             cd2.style.display = 'none';
             container.style.width = '40%';
